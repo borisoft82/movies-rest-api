@@ -55,7 +55,7 @@ Refresh and seed database running the following command:
 Download Postman from https://www.postman.com/ then install and import environment and collections files from:
 
 ```bash
-  ./z-postman-files
+  ./z-postman-files (folder is in the root of the project)
 ```
 Inside your Postman choose <b>Movies API Reporting</b> environment and copy/paste the Bearer token (you will take token from response by user logging via collection <b>Auth -> Login user</b>) inside token variable row in the column <b>Current value</b> like below and <b>Save</b>:
 
