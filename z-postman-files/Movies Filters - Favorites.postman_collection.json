@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "f20ed3dc-23f0-4212-a4d0-6f24c9eda828",
+		"name": "Movies Filters - Favorites",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5111703"
+	},
+	"item": [
+		{
+			"name": "Filter movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "31",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Big movie",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "big-movie",
+							"type": "text"
+						},
+						{
+							"key": "storyline",
+							"value": "Big movie storyline",
+							"type": "text"
+						},
+						{
+							"key": "director",
+							"value": "Pjer Zalica",
+							"type": "text"
+						},
+						{
+							"key": "writer",
+							"value": "Writer",
+							"type": "text"
+						},
+						{
+							"key": "cast",
+							"value": "Cast",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sort",
+							"value": "desc",
+							"type": "text"
+						},
+						{
+							"key": "pagination",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/movies/filter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"movies",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User favorite movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/favorite/user/movies",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favorite",
+						"user",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to favorites",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "favorite_movie",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/favorite/movies",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favorite",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
